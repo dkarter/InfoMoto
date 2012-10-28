@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Make:</b>
+  <%= @bike.make %>
+</p>
+
+<p>
+  <b>Model:</b>
+  <%= @bike.model %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @bike.year %>
+</p>
+
+<p>
+  <b>Mileage:</b>
+  <%= @bike.mileage %>
+</p>
+
+
+<%= link_to 'Edit', edit_bike_path(@bike) %> |
+<%= link_to 'Back', bikes_path %>
