@@ -1,4 +1,4 @@
 class Bike < ActiveRecord::Base
-	belongs_to User
-	has_many Rides
+	belongs_to :user
+	has_many :rides
 end

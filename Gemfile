@@ -25,6 +25,15 @@ gem 'jquery-rails'
 # add haml processing (Dorian)
 gem 'haml'
 gem 'haml-rails'
+# add Devise for authentication (Dorian)
+gem 'devise'
+# add CanCan for authorization (Dorian)
+gem 'cancan'
+
+# this is where you put stuff only related to development
+group :development do
+  gem "nifty-generators"
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

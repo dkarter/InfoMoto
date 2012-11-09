@@ -1,4 +1,7 @@
 class BikesController < ApplicationController
+  #switch to CanCan in the future
+  before_filter :authenticate_user!
+  
   # GET /bikes
   # GET /bikes.json
   def index

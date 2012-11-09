@@ -1,4 +1,10 @@
 InfoMoto::Application.routes.draw do
+  get "home/dashboard"
+
+  get "home/index"
+
+  devise_for :users
+
   resources :rides
 
   resources :bikes
@@ -54,7 +60,7 @@ InfoMoto::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 

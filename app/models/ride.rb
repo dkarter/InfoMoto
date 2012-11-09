@@ -1,3 +1,3 @@
 class Ride < ActiveRecord::Base
-	belongs_to Bike
+	belongs_to :bike
 end

@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  #switch to CanCan in the future
+  before_filter :authenticate_user!, except: [:new, :create]
+  
+  
   # GET /users
   # GET /users.json
   def index
