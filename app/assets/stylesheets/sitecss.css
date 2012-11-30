@@ -1,0 +1,253 @@
+html {
+    -moz-user-select:none;
+    -ms-user-select:none;
+    -webkit-user-select:none;
+    background: #191919;
+
+}
+
+
+
+header{
+    margin-top:3em;
+}
+footer{ min-height: 5em;}
+.header_content{
+    background: #fff;
+}
+.login{
+    float:right;
+    padding: 1em;
+    padding-right:4em;
+}
+
+.videos{
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.features{
+    background:url(../img/Bike.png) no-repeat;
+    background-size: 100% auto;
+    width: 550px;
+    height: 315px;
+    margin-top: 60px;
+  
+}
+
+#marker1{
+    position:relative;
+    top: 90px;
+    left: 355px;
+}
+
+#marker2{
+    position:relative;
+    top: 230px;
+    left: 55px;
+}
+#marker3{
+    position:relative;
+    top: 170px;
+    left: 380px;
+}
+#marker4{
+    position:relative;
+    top: 190px;
+    left: 230px;
+}
+#wrapper{
+    margin-top:30px;
+    position:relative;
+}
+#hardware,#storage,#bluetooth,#mapping{
+    position:absolute;
+    top: 0;
+    left: 0;
+    height:350px;
+    background: #CCCCCC;
+    visibility: collapse;
+    overflow: hidden;
+}
+        
+
+.acct_button:link, .acct_button:visited{
+    color: #fff;
+}
+
+.acct_button{
+    -moz-border-radius:5px;
+    -moz-box-shadow:3px 2px 3px #000;
+    -webkit-border-radius:5px;
+    -webkit-box-shadow:3px 2px 3px #000;
+    background:red;
+    border:1px solid #000;
+    border-radius:5px;
+    box-shadow:3px 2px 3px #000;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:14px;
+    margin-top:10px;
+    text-align:center;
+    padding:2px;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    text-decoration: none;
+}
+
+.ribbon{
+    border-bottom:2px solid red;
+    border-top:2px solid red;
+    background: #191919;
+    width:100%;        
+}
+.header_nav{
+    width: 90%;
+display:inline-block;    
+}
+.header_nav li {
+    float:right;
+}
+.header_nav a {
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:14px;
+    text-decoration:none;
+    padding:8px 8px 8px 15px;
+}
+.header_nav a:visited{
+    color: #fff;
+}
+.header_nav a:hover {
+background:#fff;
+color:#000;
+}
+.intro{
+margin: 3em auto;
+    color: #fff;
+    font-family:'Lucida Grande', 'Lucida Sans Unicode', Arial, Sans-serif;
+font-size:13px;
+line-height:18px;
+padding:10px;
+}
+.intro h1{
+    text-align: center;
+    color: red;
+}
+.supporters{
+    margin-top: -2em;
+    padding: 1em;
+}
+.facebook{
+    width: 90%;
+display:inline-block;    
+}
+.facebook li a { 
+    font-family: 'Yellowtail';
+    line-height: 1.5em;
+    font-size: 1.25em;
+    text-decoration: none;
+    color: #fff;
+    float:right;
+}
+.facebook:link{
+    color: #fff;
+}
+.facebook:visited{
+    color: #fff;
+}
+
+
+
+#slideshow {
+background:#191919;
+color: #fff;
+height:530px;
+margin-top:30px;
+position:relative;
+width:440px;
+padding:5px;
+}
+#slideshow h1 {
+    text-align: center;
+}
+#slideshow p{
+    font-size: 13px;
+    
+}
+
+#slideshow #slidesContainer {
+height:530px;
+overflow:auto;
+position:relative;
+width:360px;
+margin:0 auto;
+}
+
+#slideshow #slidesContainer .slide {
+height:530px;
+width:360px;
+margin:0 auto;
+}
+
+.control {
+cursor:pointer;
+display:block;
+height:263px;
+position: absolute;
+text-indent:-10000px;
+width:39px;
+margin-top: -130px;
+}
+
+#leftControl {
+background:url(../img/prev.png) no-repeat 0 0;
+top: 0;
+left:0;
+}
+
+#rightControl {
+background:url(../img/next.png) no-repeat 0 0;
+top: 0;
+right:0;
+}
+
+#video{    
+    padding-top:6em;
+}
+
+
+.aboutus {
+background:#191919;
+color:#fff;
+margin-top:30px;
+width:940px;
+}
+
+.aboutuspanel {
+background:#191919;
+margin:15px;
+padding:5px;
+}
+
+.aboutus p {
+font-family:'Lucida Grande', 'Lucida Sans Unicode', Arial, Sans-serif;
+font-size:13px;
+line-height:18px;
+padding:5px;
+}
+
+.columns {
+-webkit-column-count:3;
+-webkit-column-width:40px;
+}
+
+.ipro-iit-logo {
+float:right;
+padding-bottom:65px;
+padding-left:5px;
+padding-top:65px;
+}
+
+.members {
+min-height:130px;
+min-width:315px;
+}

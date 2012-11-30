@@ -5,7 +5,7 @@ class RidesController < ApplicationController
   # GET /rides
   # GET /rides.json
   def index
-    @rides = Ride.all
+    @rides = current_user.rides
 
     respond_to do |format|
       format.html # index.html.erb
@@ -28,7 +28,7 @@ class RidesController < ApplicationController
   # GET /rides/new.json
   def new
     @ride = Ride.new
-
+    @user_bikes = current_user.bikes
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @ride }
@@ -38,13 +38,15 @@ class RidesController < ApplicationController
   # GET /rides/1/edit
   def edit
     @ride = Ride.find(params[:id])
+    @user_bikes = current_user.bikes
   end
 
   # POST /rides
   # POST /rides.json
   def create
     @ride = Ride.new(params[:ride])
-
+    @ride.user = current_user
+    
     respond_to do |format|
       if @ride.save
         format.html { redirect_to @ride, notice: 'Ride was successfully created.' }

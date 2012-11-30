@@ -16,12 +16,17 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
+    <%= f.label :bike %><br />
+    <%= f.select(:bike_id, @user_bikes.map {|b| [ b.make + ' ' + b.model + ' ' + b.year.to_s, b.id ] }) %>
+	  <%= link_to 'New Bike', new_bike_path %>
+  </div>
+  <div class="field">
     <%= f.label :start %><br />
-    <%= f.time_select :start %>
+    <%= f.datetime_select :start %>
   </div>
   <div class="field">
     <%= f.label :end %><br />
-    <%= f.time_select :end %>
+    <%= f.datetime_select :end %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -1,0 +1,46 @@
+= form_for(@user) do |f|
+  - if @user.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@user.errors.count, "error")
+        prohibited this user from being saved:
+      %ul
+        - @user.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.file_field :avatar
+  .field
+    = f.label :username
+    %br/
+    = f.text_field :username
+  .field
+    = f.label :password
+    %br/
+    = f.text_field :password
+  .field
+    = f.label :email
+    %br/
+    = f.text_field :email
+  .field
+    = f.label :dob
+    %br/
+    / minimum age is 16 enforced in view only
+    = f.date_select :dob, :start_year => Time.now.year - 16, :end_year => 1900
+  .field
+    = f.label :city
+    %br/
+    = f.text_field :city
+  .field
+    = f.label :street
+    %br/
+    = f.text_field :street
+  .field
+    = f.label :state
+    %br/
+    = f.text_field :state
+  .field
+    = f.label :years_riding
+    %br/
+    = f.number_field :years_riding
+  .actions
+    = f.submit

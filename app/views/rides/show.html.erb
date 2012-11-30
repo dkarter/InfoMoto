@@ -4,7 +4,10 @@
   <b>Name:</b>
   <%= @ride.name %>
 </p>
-
+<p>
+  <b>Bike:</b>
+  <%= (@ride.bike.make + ' ' + @ride.bike.model + ' ' + @ride.bike.year.to_s) if @ride.bike %>
+</p>
 <p>
   <b>Start:</b>
   <%= @ride.start %>

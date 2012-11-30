@@ -5,7 +5,7 @@ class BikesController < ApplicationController
   # GET /bikes
   # GET /bikes.json
   def index
-    @bikes = Bike.all
+    @bikes = current_user.bikes
 
     respond_to do |format|
       format.html # index.html.erb
@@ -44,7 +44,8 @@ class BikesController < ApplicationController
   # POST /bikes.json
   def create
     @bike = Bike.new(params[:bike])
-
+    @bike.user = current_user
+    
     respond_to do |format|
       if @bike.save
         format.html { redirect_to @bike, notice: 'Bike was successfully created.' }
