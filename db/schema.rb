@@ -25,12 +25,12 @@ ActiveRecord::Schema.define(:version => 20121130112216) do
 
   create_table "rides", :force => true do |t|
     t.string   "name"
-    t.datetime "start"
-    t.datetime "end"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "user_id"
     t.integer  "bike_id"
+    t.datetime "start"
+    t.datetime "end"
   end
 
   create_table "users", :force => true do |t|
