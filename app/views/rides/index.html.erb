@@ -1,31 +1,31 @@
 <h1>Listing rides</h1>
+<center>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Bike</th>
+      <th>Start</th>
+      <th>End</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Bike</th>
-    <th>Start</th>
-    <th>End</th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @rides.each do |ride| %>
-  <tr>
-    <td><%= ride.name %></td>
-    <td><%= (ride.bike.make + ' ' + ride.bike.model + ' ' + ride.bike.year.to_s) if ride.bike %></td>
-    <td><%= ride.start %></td>
-    <td><%= ride.end %></td>
-    <td><%= link_to 'Upload Data', '#' %></td>
-    <td><%= link_to 'Show', ride %></td>
-    <td><%= link_to 'Edit', edit_ride_path(ride) %></td>
-    <td><%= link_to 'Destroy', ride, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
+  <% @rides.each do |ride| %>
+    <tr>
+      <td><%= ride.name %></td>
+      <td><%= (ride.bike.make + ' ' + ride.bike.model + ' ' + ride.bike.year.to_s) if ride.bike %></td>
+      <td><%= ride.start %></td>
+      <td><%= ride.end %></td>
+      <td><%= link_to 'Upload Data', '#' %></td>
+      <td><%= link_to 'Show', ride %></td>
+      <td><%= link_to 'Edit', edit_ride_path(ride) %></td>
+      <td><%= link_to 'Destroy', ride, confirm: 'Are you sure?', method: :delete %></td>
+    </tr>
+  <% end %>
+  </table>
+</center>
 <br />
 
 <%= link_to 'New Ride', new_ride_path %>

@@ -1,23 +1,24 @@
 %h1 Your Bikes
-%table
-  %thead
-    %tr
-      %th Make
-      %th Model
-      %th Year
-      %th Mileage
-      %th
-      %th
-      %th
-  %tbody
-    - @bikes.each do |bike|
+%center
+  %table
+    %thead
       %tr
-        %td= bike.make
-        %td= bike.model
-        %td= bike.year
-        %td= bike.mileage
-        %td= link_to 'Show', bike
-        %td= link_to 'Edit', edit_bike_path(bike)
-        %td= link_to 'Destroy', bike, confirm: 'Are you sure?', method: :delete
+        %th Make
+        %th Model
+        %th Year
+        %th Mileage
+        %th
+        %th
+        %th
+    %tbody
+      - @bikes.each do |bike|
+        %tr
+          %td= bike.make
+          %td= bike.model
+          %td= bike.year
+          %td= bike.mileage
+          %td= link_to 'Show', bike
+          %td= link_to 'Edit', edit_bike_path(bike)
+          %td= link_to 'Destroy', bike, confirm: 'Are you sure?', method: :delete
 %br
 = link_to 'New Bike', new_bike_path

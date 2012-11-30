@@ -50,11 +50,10 @@
                 %a{href: "index.php", title: "Dashboard"} Dashboard
       .container_24
         .grid_24.intro
-          %center
-            - if show_title?
-              %h1= yield(:title)
+          - if show_title?
+            %h1= yield(:title)
 
-            = yield
+          = yield
   
       %footer
         .ribbon
